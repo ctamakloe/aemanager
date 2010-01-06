@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Expenses: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'reset', 'text', '960', 'style' %>
+</head>
+<body>
+    <div class="container_12">
+    	<div id="banner" class="grid_12">
+        </div>
+    	<div class="clear"></div>
+   	  <div id="header" class="grid_12">
+        	<div id="navbar">
+              	<ul>
+
+                <li><%= link_to "Assets", assets_path %></li>      
+                    <li id="active"><%= link_to "Expenses", expenses_path %></li>
+                    <li><%= link_to "Reports", "#" %></li>
+               </ul>
+          	</div>
+        	<div id="imagebar">
+				<span class="submenu">
+          <%= yield :submenu %>
+        </span>
+            </div>
+      	</div>
+        <div id="wrapper" class="grid_12">
+<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield %>
+            <div id="pagination">&lt;&lt; 1 of 10 &gt;&gt;</div>
+        </div>
+      	<div id="footer" class="grid_12">
+       	  <div class="grid_4 alpha ">footer 1</div>
+			<div class="grid_4 ">footer info 2</div>
+        	<div class="grid_4 omega">footer info 3</div>                        
+   	  </div>
+    </div>
+</body>
+</html>

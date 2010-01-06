@@ -1,0 +1,236 @@
+/*****************************************************************/
+/* Header */
+/*****************************************************************/
+#banner {
+	height: 30px;
+}
+div#imagebar {
+	height: 20px;
+	width: 100%;
+	border:none;
+	background-color: #0055d4; 
+}
+
+div#navbar {
+	height: 30px;
+	width: 100%;
+	border: none;
+	background-color: #d6e5ff; 
+}
+
+
+div#navbar ul {
+	/*margin: 0px;
+	padding: 0px;*/
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: medium;
+	color: #0055d4;
+	line-height: 30px;
+	white-space: nowrap;
+}
+
+
+div#navbar li {
+	list-style-type: none;
+	display: inline;
+	padding: 5px 40px 5px 40px;
+  margin: 0px;
+}
+
+.list-item {
+  background-color:#5599ff;
+}
+div#navbar li a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+div#navbar li a:link {
+	color: #FFF:
+}
+
+/*div#navbar li a:visited {
+	color: #CCC;
+}*/
+
+/*div#navbar li a:hover {
+	font-weight: bold;
+	color: #FFF;
+	background-color: #3366FF;
+}*/
+#active {
+	list-style-type: none;
+	display: inline;
+	background-color: #0055d4;
+	text-decoration: none;
+	padding: 7px 10px;
+	color: #FFF;
+}
+
+#help {
+	text-align:right;
+}
+/*****************************************************************/
+
+#wrapper {
+	border: solid 1px #d6e5ff; 
+	height:100%;
+	width:898px;
+	padding:20px 20px 20px 20px;
+}
+
+#footer {
+	background-color:#d6e5ff;
+	height: 40px;
+}
+
+
+/******************************************************************************/
+/*  Table Stying */
+/******************************************************************************/
+table {
+	border: solid 1px #d6e5ff;
+}
+
+td {
+	padding: 13px 10px 0px 10px;
+/*	border-right: dotted 2px #d6e5ff;*/
+}
+
+th {
+	padding-top: 10px;
+	color: #0055d4;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	border-right: dotted 2px #d6e5ff;
+}
+
+tr.row1 td {
+	background-color: #d7e3f4; 
+	color: #0055d4;
+	border-right: dotted 2px white;
+}
+tr.row2 td {
+	background-color: white; 
+	color: #0055d4;
+	border-right: dotted 2px #d6e5ff;
+}
+
+td.manage {
+	padding:0px;
+	margin:0px;
+	border-right:solid 1px #d6e5ff;
+}
+.img {
+	float: left;
+	padding: 5px;
+}
+/******************************************************************************/
+
+#pagination {
+	text-align: center;
+	width: 100%;
+	border: solid 1px #d6e5ff;
+	color: #0055d4;
+}
+
+.submenu {
+  position: relative;
+  top: 3px;
+  left: 40px;
+	padding:0px 0px 0px 0px;
+	font-family: "Trebuchet MS", Verdana, Geneva, sans-serif, Helvetica, sans-serif;
+	font-size: 11px;
+	color: white;
+	white-space: nowrap;
+}
+
+.submenu a {
+  text-decoration: none;
+  color: white;
+}
+/***********************************************************************/
+/*  			Submit forms               */
+/***********************************************************************/
+#content {
+	border:solid 1px #d6e5ff;
+	margin: 20px;
+	padding: 20px 50px;
+	font-size:14px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color: #0055ff;
+}
+
+#formtable {
+	width:100%;
+	border:none;
+}
+
+#formtable .label {
+	text-align:right;
+	padding:20px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:14px;
+}
+
+.txtfield {
+	border: solid 1px #d7e3f4;	
+	font-size:14px;
+	padding: 10px;
+		font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.submit {
+	border: none;
+	background: #d7e3f4;
+	color:white;
+	border-width: 0px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-shadow:white;
+	font-size:18px;
+	padding:16px 10px;
+	
+}
+
+td.fatfield {
+	padding: 10px 10px;
+	margin: 5px;
+}
+#instructions {
+	color:#71c837;
+}
+
+.hello {
+	font-size:14px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.date_div {
+	float:left;
+	margin: 0px 0px 0px 10px;
+}
+
+.date_label {
+	font-size:10px;
+	text-align:center;
+}
+
+.symbol {
+	padding-top: 10px;
+}
+
+#expensefield {
+	margin:0px;
+	padding:0px;
+}
+
+select {
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-shadow:white;
+	padding:10px;
+  font-size: 14px; 
+  border: #d7e3f4;
+  border-style: solid; 
+  border-width: 1px;
+  color: #0055FF;
+}
+/***********************************************************************/

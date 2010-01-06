@@ -1,0 +1,59 @@
+<% content_for :submenu do %>
+  <%= link_to 'Show Expense', @expense %> 
+<% end -%>
+
+ <div id="content">
+       	  <span id="instructions" style="position:relative;left:62px;">Editing expense: </span>
+          <% form_for(@expense) do |f| %>
+            <%= f.error_messages %>
+                    <table width="200" id="formtable">
+                      <tr>
+                        <td width="25%" valign="top" class="label"><label for="asset">Asset :</label></td>
+                        <td width="75%" class="fatfield" valign="top">
+                          <!-- <input name="asset" type="text" class="txtfield" size="50" maxlength="50" /> -->
+                          <%= f.collection_select(:asset_id, @assets, :id, :name) %>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top" class="label"><label for="amount">Amount :</label></td>
+                        <td class="fatfield" valign="top">
+                          <%= f.text_field :amount, :class => "txtfield", :size => "20", :maxlength => "20" %>
+                        </td>
+                      </tr>                      
+                      <tr>
+                        <td height="115" valign="top" class="label" style="">
+                        	Remarks
+                        	  <label for="remarks">:</label>
+                        </td>
+
+                        <td valign="top">
+                          <%= f.text_area :remarks, :cols => "60", :class => "txtfield hello", :rows => "7" %>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top" nowrap="nowrap" class="label" >
+                          <label for="date">Expense Date: </label>
+                        </td> 
+                        <!-- <td valign="top" style="padding:30px 0 0 0;"> -->
+                        <td valign="top">
+                          <div id="expensefield" class="">
+                            <%= f.date_select :date, :order => [:day, :month, :year] %>
+                          </div>
+                        </td>
+                      </tr>
+                      	<td></td>
+                        <td valign="top">
+                          <span style="float:left">
+                              <%= f.submit 'Update Expense', :class => "submit" %>
+                          </span>
+
+                          <span style="float:left;padding:15px;"> 
+                            or <%= link_to 'Cancel', expenses_path %>
+                          </span>
+                            
+                        </td>
+                      </tr>
+                    </table>
+                    
+                    <% end -%>
+            </div>

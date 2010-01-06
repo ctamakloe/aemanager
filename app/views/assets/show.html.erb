@@ -1,0 +1,23 @@
+<p>
+  <b>Asset:</b>
+  <%=h @asset.asset_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @asset.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @asset.description %>
+</p>
+
+<p>
+  <b>Purchase date:</b>
+  <%=h @asset.purchase_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_asset_path(@asset) %> |
+<%= link_to 'Back', assets_path %>

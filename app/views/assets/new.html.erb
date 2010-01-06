@@ -1,0 +1,62 @@
+<div id="content">
+    <span id="instructions">Enter asset details below to create new asset: </span>
+        <% form_for(@asset) do |f| %>
+          <%= f.error_messages %>
+              <table width="200" id="formtable">
+                
+              <tr>
+                  <td width="25%" valign="top" class="label">
+                    <label for="asset_asset_id">Asset ID:</label>
+                  </td>
+                  <td width="75%" class="fatfield" valign="top">
+                    <!-- <input name="asset_id" type="text" class="txtfield" size="50" maxlength="50" /> -->
+                    <%= f.text_field :asset_id, :class => "txtfield", :size => "50", :maxlength => "50" %>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td valign="top" class="label"><label for="asset_name">Asset Name:</label></td>
+                  <td class="fatfield" valign="top">
+                    <!-- <input name="asset_name" type="text" class="txtfield" size="50" maxlength="50" /> -->
+                    <%= f.text_field :name, :class => "txtfield", :size => "50", :maxlength => "50" %>
+                  </td>
+                </tr>                      
+
+                <tr>
+                  <td height="115" valign="top" class="label" style="">
+                    <label for="asset_description">Description of Asset:</label>
+                  </td>
+
+                  <td valign="top">
+                    <!-- <textarea cols="60" rows="7" class="txtfield hello"></textarea> -->
+                    <%= f.text_area :description, :cols => "60", :class => "txtfield hello", :rows => "7" %>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top" nowrap="nowrap" class="label" >
+                    <label for="purchase_date">Date of Purchase: </label>
+                  </td> 
+                  <!-- <td valign="top" style="padding:30px 0 0 0;"> -->
+                  <td valign="top">
+                    <div id="expensefield" class="">
+                      <%= f.date_select :purchase_date, :order => [:day, :month, :year] %>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td valign="top">
+                    <span style="float:left">
+                        <%= f.submit 'Create Asset', :class => "submit" %>
+                    </span>
+
+                    <span style="float:left;padding:15px;"> 
+                      or <%= link_to 'Cancel', assets_path %>
+                    </span>
+                      
+                  </td>
+                </tr>
+              </table>
+              
+    <% end -%>
+  </div>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  amount: 9.99
+  asset_id: 1
+  remarks: MyText
+  date: 2010-01-05
+
+two:
+  amount: 9.99
+  asset_id: 1
+  remarks: MyText
+  date: 2010-01-05
