@@ -1,6 +1,4 @@
 class AssetsController < ApplicationController
-  # GET /assets
-  # GET /assets.xml
   def index
     @assets = Asset.all
 
@@ -10,8 +8,6 @@ class AssetsController < ApplicationController
     end
   end
 
-  # GET /assets/1
-  # GET /assets/1.xml
   def show
     @asset = Asset.find(params[:id])
 
@@ -21,8 +17,6 @@ class AssetsController < ApplicationController
     end
   end
 
-  # GET /assets/new
-  # GET /assets/new.xml
   def new
     @asset = Asset.new
 
@@ -32,13 +26,10 @@ class AssetsController < ApplicationController
     end
   end
 
-  # GET /assets/1/edit
   def edit
     @asset = Asset.find(params[:id])
   end
 
-  # POST /assets
-  # POST /assets.xml
   def create
     @asset = Asset.new(params[:asset])
 
@@ -54,8 +45,6 @@ class AssetsController < ApplicationController
     end
   end
 
-  # PUT /assets/1
-  # PUT /assets/1.xml
   def update
     @asset = Asset.find(params[:id])
 
@@ -71,8 +60,6 @@ class AssetsController < ApplicationController
     end
   end
 
-  # DELETE /assets/1
-  # DELETE /assets/1.xml
   def destroy
     @asset = Asset.find(params[:id])
     @asset.destroy

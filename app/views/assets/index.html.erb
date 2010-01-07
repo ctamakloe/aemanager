@@ -2,26 +2,39 @@
   <%= link_to 'Add Asset', new_asset_path %>
 <% end -%>
 
+<% if @assets.empty? %>
+  <table width="891">
+    <td height="300" style="padding:50px;background-color:#d6e5ff;color:blue;">
+        <span class="instructions">
+          Welcome to Asset Expense Manager v0.1
+          <p>
+            No assets have been added yet. <%= link_to 'Click here', new_asset_path %> to begin adding assets.
+          </p>
+        </span>
+    </td>
+  </table>
+  
+<% else %>
+  <table width="891">
+    <tr>
+      <th width="75">Asset ID</th>
+      <th width="222">Name</th>
+      <th width="400"><p>Description</p></th>
+      <th width="120" style="border-right:solid 1px #d4e5ff">Manage</th>
+    </tr>
+                    
+    <% @assets.each do |asset| %>
+        <tr class="<%= cycle('row1','row2') %>">
+          <td style="text-align:center;"><%=h asset.asset_id %></td>
+            <td ><%=h asset.name %></td>
+            <td ><%=h truncate(asset.description, 80) %></td>
+            <td class="manage" style="border-right:solid 1px #d4e5ff">
+              <div class="img"><%= link_to image_tag("show.png"), asset %></div>
+              <div class="img"><%= link_to image_tag("edit.png"), edit_asset_path(asset) %></div>
+              <div class="img"><%= link_to image_tag("delete.png"), asset, :confirm => 'Are you sure?', :method => :delete %></div>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+<% end %>
 
-
-<table width="891">
-  <tr>
-    <th width="75">Asset ID</th>
-    <th width="222">Name</th>
-    <th width="400"><p>Description</p></th>
-    <th width="120" style="border-right:solid 1px #d4e5ff">Manage</th>
-  </tr>
-        	        
-  <% @assets.each do |asset| %>
-      <tr class="<%= cycle('row1','row2') %>">
-			  <td style="text-align:center;"><%=h asset.asset_id %></td>
-          <td ><%=h asset.name %></td>
-        	<td ><%=h truncate(asset.description, 80) %></td>
-        	<td class="manage" style="border-right:solid 1px #d4e5ff">
-            <div class="img"><%= link_to image_tag("show.png"), asset %></div>
-            <div class="img"><%= link_to image_tag("edit.png"), edit_asset_path(asset) %></div>
-            <div class="img"><%= link_to image_tag("delete.png"), asset, :confirm => 'Are you sure?', :method => :delete %></div>
-        </td>
-      </tr>
-  <% end %>
-</table>

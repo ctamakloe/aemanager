@@ -3,6 +3,7 @@ class ExpensesController < ApplicationController
   # GET /expenses.xml
   def index
     @expenses = Expense.all
+    @assets = Asset.all
 
     respond_to do |format|
       format.html # index.html.erb
