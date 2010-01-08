@@ -1,7 +1,7 @@
 require 'digest/sha1'
 
 class User < ActiveRecord::Base
-  has_many :assets
+  has_many :assets, :dependent => :destroy
 
   include Authentication
   include Authentication::ByPassword
