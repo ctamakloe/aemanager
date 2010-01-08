@@ -34,10 +34,10 @@
     </tr>
     <% @expenses.each do |expense| %>
       <tr class="<%=h cycle("row1", "row2") -%>">
-      <td style="text-align:center;"><%=h expense.amount %></td>
+      <td style="text-align:center;"><%=h number_to_currency(expense.amount) %></td>
         <td><%=h correspondin_asset(expense.asset_id) %></td>
         <td><%=h truncate(expense.remarks, 80) %></td>
-        <td><%=h expense.date %></td>
+        <td><%=h expense.date.strftime("%b %d, %Y") %></td>
         <td class="manage" style="border-right:solid 1px #d4e5ff">
           <div class="img"><%= link_to image_tag("show.png"), expense %></div>
           <div class="img"><%= link_to image_tag("edit.png"), edit_expense_path(expense) %></div>

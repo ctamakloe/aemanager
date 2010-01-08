@@ -5,20 +5,23 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <!-- <title><%#= controller.controller_name.capitalize -%>: <%#= controller.action_name %></title>-->
-  <title>Asset Expense Manager v1.0: <%= controller.controller_name.capitalize -%></title>
+  <!-- <title>Asset Expense Manager v1.0: <%#= controller.controller_name.capitalize -%></title> -->
+  <title>Coojo - Simple Asset Expense Tracking</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <%= stylesheet_link_tag 'reset', 'text', '960', 'style' %>
 </head>
 <body>
     <div class="container_12">
-    	<div id="banner" class="grid_12">
+    	<div id="banner" class="grid_12" style="background-color:#d6e5ff;">
+        <div>
         </div>
+      </div>
     	<div class="clear"></div>
    	  <div id="header" class="grid_12">
         	<div id="navbar">
               	<ul>
-                  <li></li>
-                  <li class="list-item" id="<%= "active" if page_is?("assets") %>"><%= link_to "Assets", assets_path %></li>      
+                  <!-- <li></li> -->
+                  <li style="margin-left:20px;" class="list-item" id="<%= "active" if page_is?("assets") %>"><%= link_to "My Assets", assets_path %></li>      
                   <li class="list-item" id="<%= "active" if page_is?("expenses") %>"><%= link_to "Expenses", expenses_path %></li>
                   <li class="list-item" id="<%= "active" if page_is?("reports") %>"><a href="">Reports</a></li>
                 </ul>

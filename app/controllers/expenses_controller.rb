@@ -1,6 +1,6 @@
 class ExpensesController < ApplicationController
-  # GET /expenses
-  # GET /expenses.xml
+  before_filter :login_required#, :except => %w[ index show ]
+
   def index
     @expenses = Expense.all
     @assets = Asset.all
@@ -11,8 +11,6 @@ class ExpensesController < ApplicationController
     end
   end
 
-  # GET /expenses/1
-  # GET /expenses/1.xml
   def show
     @expense = Expense.find(params[:id])
 
@@ -22,8 +20,6 @@ class ExpensesController < ApplicationController
     end
   end
 
-  # GET /expenses/new
-  # GET /expenses/new.xml
   def new
     @expense = Expense.new
     # @assets_1 = Asset.all(:order => "name").map {|u| [u.name, u.id]}
@@ -35,14 +31,11 @@ class ExpensesController < ApplicationController
     end
   end
 
-  # GET /expenses/1/edit
   def edit
     @expense = Expense.find(params[:id])
     @assets = Asset.all(:order => "name") 
   end
 
-  # POST /expenses
-  # POST /expenses.xml
   def create
     @expense = Expense.new(params[:expense])
 
@@ -58,8 +51,6 @@ class ExpensesController < ApplicationController
     end
   end
 
-  # PUT /expenses/1
-  # PUT /expenses/1.xml
   def update
     @expense = Expense.find(params[:id])
      
@@ -76,8 +67,6 @@ class ExpensesController < ApplicationController
     end
   end
 
-  # DELETE /expenses/1
-  # DELETE /expenses/1.xml
   def destroy
     @expense = Expense.find(params[:id])
     @expense.destroy

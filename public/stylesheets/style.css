@@ -2,7 +2,7 @@
 /* Header */
 /*****************************************************************/
 #banner {
-	height: 30px;
+	height: 90px;
 }
 div#imagebar {
 	height: 20px;
@@ -23,7 +23,7 @@ div#navbar ul {
 	/*margin: 0px;
 	padding: 0px;*/
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	font-size: medium;
+	font-size: 15px;
 	color: #0055d4;
 	line-height: 30px;
 	white-space: nowrap;
@@ -33,7 +33,7 @@ div#navbar ul {
 div#navbar li {
 	list-style-type: none;
 	display: inline;
-	padding: 5px 40px 5px 40px;
+	padding: 5px 20px;
   margin: 0px;
 }
 
@@ -74,7 +74,7 @@ div#navbar li a:link {
 
 #wrapper {
 	border: solid 1px #d6e5ff; 
-	height:100%;
+	height:550px;
 	width:898px;
 	padding:20px 20px 20px 20px;
 }
