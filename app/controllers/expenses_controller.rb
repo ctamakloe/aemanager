@@ -3,7 +3,8 @@ class ExpensesController < ApplicationController
 
   def index
     @expenses = Expense.all
-    @assets = Asset.all
+    # @assets = Asset.all
+    @assets = current_user.assets
 
     respond_to do |format|
       format.html # index.html.erb
@@ -23,7 +24,8 @@ class ExpensesController < ApplicationController
   def new
     @expense = Expense.new
     # @assets_1 = Asset.all(:order => "name").map {|u| [u.name, u.id]}
-    @assets = Asset.all(:order => "name") 
+    # @assets = Asset.all(:order => "name") 
+    @assets = current_user.assets
 
     respond_to do |format|
       format.html # new.html.erb
@@ -33,7 +35,8 @@ class ExpensesController < ApplicationController
 
   def edit
     @expense = Expense.find(params[:id])
-    @assets = Asset.all(:order => "name") 
+    # @assets = Asset.all(:order => "name") 
+    @assets = current_user.assets
   end
 
   def create

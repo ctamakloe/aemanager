@@ -25,25 +25,19 @@
                   <li class="list-item" id="<%= "active" if page_is?("expenses") %>"><%= link_to "Expenses", expenses_path %></li>
                   <li class="list-item" id="<%= "active" if page_is?("reports") %>"><a href="">Reports</a></li>
                 </ul>
-          	</div>
-        	<div id="imagebar">
-				<span class="submenu"><%= yield :submenu %> </span>
-            </div>
-      	</div>
-        <div id="wrapper" class="grid_12">
-
-<p style="color: green"><%= flash[:notice] %></p>
-
-<%= yield %>
-
-
-            <div id="pagination">&lt;&lt; 1 of 10 &gt;&gt;</div>
+          </div>
+        <div id="imagebar">
+          <span class="submenu"><%= yield :submenu %> </span>
         </div>
-      	<div id="footer" class="grid_12">
-       	  <div class="grid_4 alpha "></div>
-          <div class="grid_4 "></div>
-        	<div class="grid_4 omega"></div> 
-   	  </div>
-    </div>
+      </div>
+      <div id="wrapper" class="grid_12">
+        <p style="color: green"><%= flash[:notice] %></p>
+          <%= yield %>
+      </div>
+      <div id="footer" class="grid_12">
+        <div class="grid_4 alpha "></div>
+        <div class="grid_4 "></div>
+        <div class="grid_4 omega"></div> 
+      </div>
 </body>
 </html>

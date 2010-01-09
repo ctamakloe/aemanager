@@ -2,8 +2,17 @@
   <%= link_to 'Add Asset', new_asset_path %>
 <% end -%>
 
+<div id="searchdiv">
+  <div id="searchbox">
+    <% form_tag assets_path, :method => "get" do -%>
+        <%= text_field_tag :search, params[:search], :class => ["txtfield searchfield"], :size => "48" %>
+        <%= submit_tag "Find Asset", :name => nil, :class => "search_button", :id => "search_button" %>
+    <% end -%>
+  </div>
+</div>
+<br />
+<table width="898">
 <% if @assets.empty? %>
-  <table width="891">
     <td height="300" style="padding:50px;background-color:#d6e5ff;color:blue;">
         <span class="instructions">
           Welcome to Asset Expense Manager v0.1
@@ -12,18 +21,16 @@
           </p>
         </span>
     </td>
-  </table>
   
 <% else %>
-  <table width="891">
     <tr>
       <th width="75">Asset ID</th>
-      <th width="222">Name</th>
-      <th width="400"><p>Description</p></th>
+      <th width="222" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name</th>
+      <th width="400" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description</th>
       <th width="120" style="border-right:solid 1px #d4e5ff">Manage</th>
     </tr>
                     
-    <% @assets.each do |asset| %>
+    <% @assets_search.each do |asset| %>
         <tr class="<%= cycle('row1','row2') %>">
           <td style="text-align:center;"><%=h asset.asset_id %></td>
             <td ><%=h asset.name %></td>
@@ -35,6 +42,9 @@
           </td>
         </tr>
     <% end %>
-  </table>
 <% end %>
+</table>
 
+<div id="pagination">
+  <%= will_paginate @assets_search %>
+</div>

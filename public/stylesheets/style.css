@@ -37,9 +37,6 @@ div#navbar li {
   margin: 0px;
 }
 
-.list-item {
-  background-color:#5599ff;
-}
 div#navbar li a {
 	text-decoration: none;
 	color: #FFF;
@@ -47,6 +44,9 @@ div#navbar li a {
 
 div#navbar li a:link {
 	color: #FFF:
+}
+.list-item {
+  background-color:#5599ff;
 }
 
 /*div#navbar li a:visited {
@@ -76,7 +76,7 @@ div#navbar li a:link {
 	border: solid 1px #d6e5ff; 
 	height:550px;
 	width:898px;
-	padding:20px 20px 20px 20px;
+	padding:0px 20px 20px 20px;
 }
 
 #footer {
@@ -95,23 +95,25 @@ table {
 td {
 	padding: 13px 10px 0px 10px;
 /*	border-right: dotted 2px #d6e5ff;*/
+color:#335577;
 }
 
 th {
-	padding-top: 10px;
-	color: #0055d4;
+	padding: 5px 0px;
+color:#335577;
+	/*color: #0055d4;*/
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	border-right: dotted 2px #d6e5ff;
+  font-weight:normal;
+  font-size:1.1em;
 }
 
 tr.row1 td {
 	background-color: #d7e3f4; 
-	color: #0055d4;
 	border-right: dotted 2px white;
 }
 tr.row2 td {
 	background-color: white; 
-	color: #0055d4;
 	border-right: dotted 2px #d6e5ff;
 }
 
@@ -130,7 +132,11 @@ td.manage {
 	text-align: center;
 	width: 100%;
 	border: solid 1px #d6e5ff;
-	color: #0055d4;
+	color: #999999;
+}
+
+#pagination a {
+  text-decoration:none;
 }
 
 .submenu {
@@ -157,7 +163,7 @@ td.manage {
 	padding: 20px 50px;
 	font-size:14px;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	color: #0055ff;
+	color: #335577;/*#0055ff;*/
 }
 
 #formtable {
@@ -176,7 +182,7 @@ td.manage {
 	border: solid 1px #d7e3f4;	
 	font-size:14px;
 	padding: 10px;
-		font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 .submit {
@@ -234,3 +240,50 @@ select {
   color: #0055FF;
 }
 /***********************************************************************/
+
+.hrdiv {
+  border-top:1px solid #8CB4D0
+}
+
+#searchdiv {
+  background-color:#D7E3F4;
+}
+
+#searchbox {
+  width:600px;
+  background-color:#D7E3F4;
+  padding:10px;
+  position:relative;
+  left:170px;
+}
+
+.searchfield {
+  border:1px solid #8CB4D0;
+  color:#999999;
+  display:inline-block;
+  font-size:21px;
+  height:28px;
+  margin:0 2px 5px 0;
+  padding:0 0 0 7px;
+  width:390px;
+}
+
+.search_button {
+  border:1px solid #AFBEC7;
+  padding:10px 20px 6px 20px;
+  /*background-position:0-30px;
+    background-color:#8CB4D0;*/
+  color:#445566;
+  font-size:16px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  background:#D9E1E5 url(/images/nav.gif) repeat scroll 0 0;
+  font-size-adjust:none;
+  font-stretch:normal;
+  font-style:normal;
+  font-variant:normal;
+}
+
+#search_button:hover {
+  background-position:left bottom;
+  color:#223344;
+}
